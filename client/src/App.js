@@ -42,7 +42,7 @@ const App = () => {
           if (message.id === yourID) {
             return (
               <div key={index}>
-                <p>{message.body}</p>
+                <p>mine:{message.body}</p>
               </div>
             );
           }
