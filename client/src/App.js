@@ -10,7 +10,6 @@ const App = () => {
 
   useEffect(() => {
     let connect = io.connect("/");
-
     connect.on("your id", (id) => {
       setYourID(id);
     });
@@ -32,9 +31,9 @@ const App = () => {
     connect.emit("send message", messageObject);
   };
 
-  function handleChange(e) {
+  const handleChange = (e) => {
     setMessage(e.target.value);
-  }
+  };
 
   return (
     <>
